@@ -7,6 +7,7 @@ class PortfoliosController < ApplicationController
     @angular_portfolio_items = Portfolio.angular
   end
 
+<<<<<<< HEAD
   def new
     @portfolio_item = Portfolio.new
     3.times { @portfolio_item.technologies.build }
@@ -14,6 +15,15 @@ class PortfoliosController < ApplicationController
 
   def create
     @portfolio_item = Portfolio.new(portfolio_params)
+=======
+def new
+  @portfolio_item = Portfolio.new
+  3.times { @portfolio_item.technologies.build }
+end
+
+  def create
+    @portfolio_item = Portfolio.new(params.require(:portfolio).permit(:title, :subtitle, :body, technologies_attributes: [:name]))
+>>>>>>> cfc6d4945ae28bdb57350e446504d030eeb5eed0
 
     respond_to do |format|
       if @portfolio_item.save
