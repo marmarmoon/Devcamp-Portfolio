@@ -5,8 +5,3 @@ class ApplicationController < ActionController::Base
   include DefaultPageContent
   
   before_action :set_copyright
-  
-  def set_copyright
-    @copyright = MartinaViewTool::Renderer.copyright 'Martina Martinez', 'All rights reserved'
-  end
-end

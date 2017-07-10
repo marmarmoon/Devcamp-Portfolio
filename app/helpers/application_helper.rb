@@ -15,4 +15,10 @@ module ApplicationHelper
       content_tag(:p, greeting, class: "source-greeting")
     end
   end
+  
+  def copyright_generator
+     
+  def set_copyright
+    MartinaViewTool::Renderer.copyright 'Martina Martinez', 'All rights reserved'
+  end
 end
