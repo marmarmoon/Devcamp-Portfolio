@@ -7,6 +7,6 @@ class ApplicationController < ActionController::Base
   before_action :set_copyright
   
   def set_copyright
-    @copyright = MartinaViewTool::Renderer.copyright 'Martina Martinez', 'All rights reserved'
+    @copyright = MartinaViewTools::Renderer.copyright 'Martina Martinez', 'All rights reserved'
   end
 end
