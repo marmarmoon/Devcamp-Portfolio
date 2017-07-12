@@ -4,9 +4,9 @@ class ApplicationController < ActionController::Base
   include CurrentUserConcern
   include DefaultPageContent
   
-  before_action :set_copyright
+  before_action :set_source
   
-  def set_copyright
-    @copyright = MartinaViewTools::Renderer.copyright 'Martina Martinez', 'All rights reserved'
+   def set_source
+    session[:source] = params[:q] if params[:q]
   end
 end
