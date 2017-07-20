@@ -1,0 +1,27 @@
+<div class="collapse bg-inverse" id="navbarHeader">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-8 py-4">
+        <h4 class="text-white">About</h4>
+        <p class="text-muted">Here are the projects I've done so far!</p>
+        <p class="text-muted">Take your time to look at them and if you have any questions, don't hesitate to <%= link_to 'contact me!', contact_path %></p>
+      </div>
+      <div class="col-sm-4 py-4">
+        <h4 class="text-white">Explore</h4>
+        <ul class="list-unstyled">
+          <%= nav_helper 'text-white', 'li' %>
+          <li><%= login_helper 'text-white' %></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="navbar navbar-inverse bg-inverse">
+  <div class="container d-flex justify-content-between">
+    <%= link_to "Martina Martinez", root_path, class: 'navbar-brand' %> 
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+</div>
